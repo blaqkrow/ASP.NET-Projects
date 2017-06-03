@@ -1,0 +1,114 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MainMenu.master.cs" Inherits="MainMenu" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<title></title>
+   <link href="~/Styles/templatemo_style2.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="~/Styles/nivo-slider.css" type="text/css" media="screen" />
+
+    <script language="javascript" type="text/javascript">
+        function clearText(field) {
+            if (field.defaultValue == field.value) field.value = '';
+            else if (field.value == '') field.value = field.defaultValue;
+        }
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="~/Styles/ddsmoothmenu.css" />
+
+    <script type="text/javascript" src="~/Scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/ddsmoothmenu.js"></script>
+
+    <script type="text/javascript">
+
+        ddsmoothmenu.init({
+            mainmenuid: "templatemo_menu", //menu DIV id
+            orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+            classname: 'ddsmoothmenu', //class added to menu's outer DIV
+            //customtheme: ["#1c5a80", "#18374a"],
+            contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+        })
+
+    </script>
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="templatemo_wrapper">
+        <div id="templatemo_header">
+            <div id="site_title"><h1><a href="">Free CSS Templates</a></h1></div>
+            <div id="templatemo_menu" class="ddsmoothmenu">
+                <ul>
+                    <li><a href="Home.aspx"><span></span>Home</a></li>
+                    <li><a href="About.aspx"><span></span>About Us</a></li>
+                    <li><a href="Events.aspx"><span></span>Events</a></li>
+                    <li><a href="Contact.aspx"><span></span>Contact</a></li>
+
+                </ul>
+                <br style="clear: left" />
+            </div> <!-- end of menu -->
+        </div> <!-- end of header -->
+
+    </div> <!-- end of wrapper -->
+
+    <div id="templatemo_main_wrapper">
+    	<div id="templatemo_main">
+          
+                <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+           
+        </div>
+    </div>
+
+     <div id="templatemo_footer_wrapper">
+	    <div id="templatemo_footer">
+    	    <a href="#templatemo_header" class="goto_top"></a>
+    	    <div class="col_4">
+        	    <h5>Pages</h5>
+                <ul class="footer_list">
+            	    <li><a href="Home.aspx" class="selected"><span></span>Home</a></li>
+                    <li><a href="About.aspx"><span></span>About Us</a></li>
+                    <li><a href="Events.aspx"><span></span>Events</a></li>
+                    <li><a href="Contact.aspx"><span></span>Contact</a></li>
+			    </ul>
+            </div>
+        
+            <div class="col_4">
+        	    <h5>Twitter</h5>
+                <ul class="twitter_post">
+	                <li>Testing Example</li>
+			    </ul>
+            </div>
+        
+            <div class="col_4 col_l">
+        	    <h5>Follow Us</h5>
+                <div class="footer_social_button">
+                    <a href="#"><img src="images/facebook.png" title="facebook" alt="facebook" /></a>
+                    <a href="#"><img src="images/flickr.png" title="flickr" alt="flickr" /></a>
+                    <a href="#"><img src="images/twitter.png" title="twitter" alt="twitter" /></a>
+                    <a href="#"><img src="images/youtube.png" title="youtube" alt="youtube" /></a>
+                    <a href="#"><img src="images/feed.png" title="rss" alt="rss" /></a>
+			    </div>
+                <div class="cleaner h40"></div>
+            
+        	    Copyright © 2014 <a href="#">JoshNCaifeng</a> <br /> 
+                Designed by <a href="" target="_parent">JoshNCaifeng</a>
+      		
+		    </div>
+        
+            <div class="cleaner"></div>
+        </div>
+    </div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            <div>
+            </div>
+        
+        </asp:ContentPlaceHolder>
+    
+    </form>
+</body>
+</html>
